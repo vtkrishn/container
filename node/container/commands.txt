@@ -1,0 +1,14 @@
+#to build the server
+  docker build -t server .
+#map port
+docker run -p 8080:8080 server
+
+docker rmi $(docker images -a -q)
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+
+docker system prune -a
+docker images -a
+docker ps -a
+
+docker services -a
