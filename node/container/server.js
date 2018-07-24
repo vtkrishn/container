@@ -1,5 +1,6 @@
 const http = require('http');
 const es = require('elasticsearch');
+const mongo = require('mongodb');
 
 var client= new es.Client({
         hosts: [ 'http://192.168.1.14:9200' ]
